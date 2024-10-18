@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, CircleMarker } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
 function Map () {
@@ -32,6 +32,9 @@ function Map () {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           />
+          <CircleMarker center={[location.latitude, location.longitude]} pathOptions={{ color: 'red' }} radius={20}>
+            <Popup>You are here</Popup>
+          </CircleMarker>
         </MapContainer>
       ) : (
         <p>{error ? `Error: ${error}` : "Loading..."}</p>
