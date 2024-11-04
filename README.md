@@ -1,2 +1,2 @@
 # Hike Helper
-A React JS application which uses Leaflet (react-leaflet and leaflet.offline) and OpenCV (cv2geojson) to take a picture of a map of a trail and render its output onto a map and track the location as a hiker goes along the trail
+A React JS application which uses Leaflet (react-leaflet and leaflet.offline) to render a requested trail, served by an Express JS server, to be displayed onto a map and track the location as a hiker goes along the trail
